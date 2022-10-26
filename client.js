@@ -9,9 +9,9 @@ const connect = function() {
   conn.on('connect', () => {
     conn.write('Name: JCY');
     
-    setInterval(() => {
+   /*  setInterval(() => {
       conn.write('Move: up');
-    }, 500)
+    }, 500) */
   })
 
   conn.on('data', (data) => {
