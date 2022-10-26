@@ -6,6 +6,13 @@ const connect = function() {
   });
 
   conn.setEncoding('utf-8');
+  conn.on('connect', () => {
+    conn.write('Name: JCY');
+    
+    setInterval(() => {
+      conn.write('Move: up');
+    }, 500)
+  })
 
   conn.on('data', (data) => {
     console.log(data);
